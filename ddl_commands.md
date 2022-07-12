@@ -1,4 +1,4 @@
-# Notes for Database Management System Lab :
+# DDL commands:  
 
 ## 1. To create a table named "chitkara_students"
 ### create table command 
@@ -54,15 +54,15 @@ truncate table chitkara_students;
 -   All the records/tuples/rows are deleted from the table. 
 
 ## 7. To modify datatype of a column
-### alter table <tablename> <columnname> datatype command
+### alter table <tablename> modify <columnname> datatype command
 
 ```sql
-alter table chitkara_students marks int;
+alter table chitkara_students modify marks int;
 ```
 -   The datatype has been changed from float to int.
 
 ## 8. To modify the length of a datatype of a column
-### alter table <tablename> <columnname> datatype(length) command
+### alter table <tablename> modify <columnname> datatype(length) command
 
 ```sql
 alter table chitkara_students std_name varchar2(25);
@@ -93,8 +93,8 @@ alter table chitkara_students rename to chitkara_ke_bache;
     alter table chitkara_students drop hostel_name; 
     desc chitkara_students;
     truncate table chitkara_students; 
-    alter table chitkara_students marks int;
-    alter table chitkara_students std_name varchar2(25);
+    alter table chitkara_students modify marks int;
+    alter table chitkara_students modify std_name varchar2(25);
     alter table chitkara_students rename to chitkara_ke_bache;
     desc chitkara_ke_bache;
 ```
