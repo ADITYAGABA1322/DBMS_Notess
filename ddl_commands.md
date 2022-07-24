@@ -41,19 +41,11 @@ alter table chitkara_students add hostel_name varchar(20);
 ### alter table <tablename> drop <columnname> command
 
 ```sql
-alter table chitkara_students drop hostel_name; 
+alter table chitkara_students drop column hostel_name; 
 ```
 -   Describe the table and you can now see that the column is now dropped.
 
-## 6. To remove the records/tuples/rows of a table
-### truncate table <tablename> command
-
-```sql
-truncate table chitkara_students; 
-```
--   All the records/tuples/rows are deleted from the table. 
-
-## 7. To modify datatype of a column
+## 6. To modify datatype of a column
 ### alter table <tablename> modify <columnname> datatype command
 
 ```sql
@@ -61,7 +53,7 @@ alter table chitkara_students modify marks int;
 ```
 -   The datatype has been changed from float to int.
 
-## 8. To modify the length of a datatype of a column
+## 7. To modify the length of a datatype of a column
 ### alter table <tablename> modify <columnname> datatype(length) command
 
 ```sql
@@ -69,7 +61,7 @@ alter table chitkara_students std_name varchar2(25);
 ```
 -   The length of datatype has been changed from 20 to 25.
 
-## 9. To rename the tablename
+## 8. To rename the tablename
 ### alter table <tableOLDname> rename to <tableNEWname> command
 
 ```sql
@@ -90,7 +82,7 @@ alter table chitkara_students rename to chitkara_ke_bache;
     -- desc chitkara_students;
     alter table chitkara_students add hostel_name varchar(20); 
     desc chitkara_students;
-    alter table chitkara_students drop hostel_name; 
+    alter table chitkara_students drop column hostel_name; 
     desc chitkara_students;
     truncate table chitkara_students; 
     alter table chitkara_students modify marks int;
