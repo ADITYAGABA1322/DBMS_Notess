@@ -224,10 +224,12 @@ By default, user table is already there in the database. (Details about the user
 - Attribues : 
 
 | User | Data | Type |
-| ----------- | ----------- |
-| | | |
-| | | |
-| | | |
+| ---- | ---- | ---- |
+| user | ---- | char(32) |
+| ---- | ---- | ---- |
+| ---- | ---- | ---- |
+| ---- | ---- | ---- |
+
 
 
 
