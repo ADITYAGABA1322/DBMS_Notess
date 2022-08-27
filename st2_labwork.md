@@ -1,4 +1,4 @@
-# LAB CONTENT FOR FA2 OF DBMS
+# LAB CONTENT FOR ST2 OF DBMS
 
 #### Topics to be covered :
 1. Correlated Query
@@ -8,7 +8,7 @@
 5. Backup Database
 6. Recovery Database
 7. TCL (Transactional Control Language) : Commit, Rollback, SavePoint
-8. Priveleges : Grant & Revoke
+8. Management Of Users : Grant - Revoke 
 
 ## Correlated Query or Synchronized Query 
 - Top Down Approachh {Outer Query (Inner Query)}
@@ -197,10 +197,43 @@ select * from chitkara_students;
 - Commit; (save all transactions in complete manner)
 
 
-## Grant & Revoke Priveleges
+## Grant & Revoke Priveleges: 
 - Grant [AlL/SELECT/EXECUTE]
 GRANT SELECT ON EMPLOYEE TO PUBLIC/UNAME 
 WITH GRANT; (means other person can also grant someone else, this isn't a secure method, this is optional)
 
 - Revoke []
 REVOKE SELECT ON EMPLOYEE FROM PUBLIC/UNAME;
+
+- Create User
+- Give permissions --> ALL/SELECT/UPDATE (specific)
+- By default, super user has with grant permission. 
+- First Step of Command Line Version Of MySQL --> Password
+
+```sql 
+mysql > show databases;
+      > use mysql;
+      > show tables; --to see how many tables are there
+      > describe user; --to get all the attributes of the user table 
+      > select user from user; --select <attributename> from <tablename>
+      --or
+      > select user from mysql.user;      
+```
+
+By default, user table is already there in the database. (Details about the user)
+- Attribues : 
+
+| User | Data | Type |
+| ----------- | ----------- |
+| | | |
+| | | |
+| | | |
+
+
+
+```sql 
+  > create user 'chikki'@'localhost' identified by 'chikki1';
+  > grant select on user to 'chikki'@'localhost';
+  > select * from user;
+  > revoke select on user from 'chikki'@'localhost';
+```
